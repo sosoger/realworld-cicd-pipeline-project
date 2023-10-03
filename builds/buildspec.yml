@@ -1,5 +1,5 @@
 version: 0.2
-env:
+env: 
   parameter-store:
     CODEARTIFACT_AUTH_TOKEN: CODEARTIFACT_AUTH_TOKEN
 phases:
@@ -15,7 +15,7 @@ phases:
       - ln -s apache-maven-3.9.4 maven
   build:
     commands:
-      - mvn clean package -DskipTests
+      - mvn clean install -DskipTests
 
 artifacts:
   files:
